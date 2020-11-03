@@ -1,0 +1,12 @@
+---
+title: "Murrel's website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+
+---
+
+# Murrel's website!
+
+Welcome! Learm more about me by clicking links on the above navigation bar.

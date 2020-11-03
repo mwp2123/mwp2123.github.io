@@ -1,0 +1,20 @@
+name: "Murrel Pereira"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Experience"
+      href: cv.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<murrelp@gmail.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/mwp2123/
+    - icon: fa-linkedin fa-lg
+      href: http://www.linkedin.com/in/murrel-pereira-03573a41
+output:
+  html_document:
+    theme: flatly

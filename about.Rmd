@@ -1,0 +1,16 @@
+---
+title: "About Me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+### Murrel Pereira
+
+#### *Biostatistics Master's student, Columbia University Mailman School of Public Health*
+
+I am a bioprocessing engineer and data scientist in the Process Development group at Regeneron Pharmaceuticals. I'm currently pursuing a part-time master's in biostatistics at Columbia University to broaden my knowledge within the biotechnology industry. 
+
+
+
