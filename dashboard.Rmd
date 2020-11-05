@@ -60,7 +60,6 @@ instacart_user_summary %>%
 
 
 
-
 ```
 
 Column {data-width=350}
@@ -71,20 +70,19 @@ Column {data-width=350}
 ```{r}
 instacart %>%  
   sample_n(10000) %>% 
-  count(
-    department
-  ) %>% 
+  group_by(department,order_dow) %>% 
+  summarize(n =n()) %>% 
   mutate(
     department =as.factor(department),
     department = fct_reorder(department,n)
   ) %>% 
   plot_ly(
-    x = ~department, y=~n,
-    alpha = .5,
-    type = "bar"
+    x = ~order_dow, y=~n, color =~department,
+    alpha = .8,
+    type = "scatter", mode = "line", colors = "viridis"
   ) %>% 
-  layout(xaxis = list(title = "Department"), 
-         yaxis = list(title = "# of orders"),
+  layout(xaxis = list(title = "Day of Week"), 
+         yaxis = list(title = "Avg Orders"),
          title = "Number of Orders per Department")
 ```
 
