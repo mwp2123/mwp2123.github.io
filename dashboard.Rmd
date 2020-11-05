@@ -1,0 +1,109 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(flexdashboard)
+
+
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+
+
+
+data("instacart")
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+instacart_user_summary =
+instacart %>% 
+  sample_n(10000) %>% 
+  group_by(user_id,order_id,order_dow, order_hour_of_day, days_since_prior_order) %>% 
+  summarize(n =n()) %>% 
+  mutate(
+    text_label = str_c("Hour of Day: ", order_hour_of_day, "\nNumber of Orders: ", n)
+  )
+
+instacart_user_summary %>%  
+  plot_ly(
+    x = ~order_hour_of_day, y=~n, text =~text_label,
+    alpha = .5,
+    type = "bar"
+  ) %>% 
+  layout(xaxis = list(title = "Hour of Day (24hrs)"), 
+         yaxis = list(title = "# of orders"),
+         title = "Number of Orders throughout the Day")
+
+
+
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart %>%  
+  sample_n(10000) %>% 
+  count(
+    department
+  ) %>% 
+  mutate(
+    department =as.factor(department),
+    department = fct_reorder(department,n)
+  ) %>% 
+  plot_ly(
+    x = ~department, y=~n,
+    alpha = .5,
+    type = "bar"
+  ) %>% 
+  layout(xaxis = list(title = "Department"), 
+         yaxis = list(title = "# of orders"),
+         title = "Number of Orders per Department")
+```
+
+### Chart C
+
+```{r}
+instacart %>%  
+  sample_n(10000) %>% 
+  mutate(
+    department =as.factor(department),
+    department = fct_reorder(department,days_since_prior_order)
+  ) %>% 
+  plot_ly(
+    x = ~department, y=~days_since_prior_order,
+    alpha = .8,
+    type = "box", colors = "viridis"
+  ) %>% 
+  layout(xaxis = list(title = "Department"), 
+         yaxis = list(title = "Days Since Prior Order"),
+         title = "Days Since Prior Order")
+```
+

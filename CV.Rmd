@@ -31,9 +31,10 @@ output:
     + Wrote and reviewed statistical guides for department
     + Conducted vision meetings to understand pain points across department and areas for automation
     + Led team in development of scripts to automate statistical tables in development reports and BLAs
-  + OSI Soft PI Administrator
-    + Onboarded cell culture lab equipment online data to PI system
-    + Maintained PI alarms for lab equipment
+  + OSIsoft PI Administrator
+    + Onboarded cell culture lab equipment's online data to PI system
+    + Developed batch trigger logic for small scale bioreactors
+    + Maintained/developed PI alarms for lab equipment
     + Maintained glucose/antifoam autofeed system for cell culture bioreactors
     + PI AF, BI Integrator, Event Frames, Processbook, PI Vision, PI Datalink
   + Freezer inventory app
@@ -53,18 +54,17 @@ output:
 * Process Development Engineer
   + Early Stage Process Development
     + Led and supported upstream process development for multiple clinical processes
-      + Cell line screening across various life cycle stages of molecule
-      + Supported tech transfer for clinical lots at the 2000L manufacturing scale via transmittals, manufacturing record reviews, and troubleshooting of issues
+    + Cell line screening across various life cycle stages of molecule
+    + Supported tech transfer for clinical lots at the 2000L manufacturing scale via transmittals, manufacturing record reviews, and troubleshooting of issues
   + Late Stage Process Development
       + Led upstream process development for commercial processes
-        + Commercial processes for one bispecific and one monoclonal antibodies
-        + Activities included, but were not limited to:
-          + Risk assessment of manufacturing processes using QTPP, CQAs, High/Low level unit operation risk assessments, PFMEAS
-          + Design and analysis of characterization experiments to identify CPPs in bioreactor processes
-          + Supported initial transfer to 2000L manufacturing site via transmittals, manufacturing record reviews, troubleshooting batch issues
-          + Supporting validation (PPQ) campaigns at the manufacturing site via transmittals, manufacturing record reviews, troubleshooting batch issues, PPQ report review, PAR report reviews
-          + Documentation: ELN, development reports,transmittals, BLA
-        + Scale Characterization - Modeling of scale independent process parameters to identify sources of variability between 2L and 40L SS bioreactor performance
+      + Commercial processes for one bispecific and one monoclonal antibodies
+      + Risk assessment of manufacturing processes using QTPP, CQAs, High/Low level unit operation risk assessments, PFMEAS
+      + Design and analysis of characterization experiments to identify CPPs in bioreactor processes
+      + Supported initial transfer to 2000L manufacturing site via transmittals, manufacturing record reviews, troubleshooting batch issues
+      + Supporting validation (PPQ) campaigns at the manufacturing site via transmittals, manufacturing record reviews, troubleshooting batch issues, PPQ report review, PAR report reviews
+      + Documentation: ELN, development reports,transmittals, BLA
+      + Scale Characterization Project: Modeling of scale independent parameters to identify sources of variability in bioreactor performance across scales
 
 #### Deloitte *(2012 - 2013)*
 * Data Analytics Associate
@@ -75,7 +75,7 @@ output:
 ### **Skills**
 
 #### Statistics/Programming Tools
-JMP, JSL, R, R Markdown, R Shiny, Python, SAS, Git
+JMP, JSL, R, R Markdown, R Shiny, Python, Ironpython, HTML, CSS, SAS, Git
 
 #### Statistical Methods
 Linear Regression, Design of Experiments, Stepwise, Time series analysis, Logistic regression, Functional data analysis, Clustering, Clinical trial design, Monte Carlo Simulation, Process Capability analysis
