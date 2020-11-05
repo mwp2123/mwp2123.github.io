@@ -52,7 +52,7 @@ instacart %>%
     type = "scatter", mode = "line", colors = "viridis"
   ) %>% 
   layout(xaxis = list(title = "Day of Week"), 
-         yaxis = list(title = "Avg Orders"),
+         yaxis = list(title = "# of Orders"),
          title = "Number of Orders per Department")
 
 
