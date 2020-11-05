@@ -7,6 +7,6 @@ output:
 
 ---
 
-# Murrel's website!
+### Hello
 
 Welcome! Learm more about me by clicking links on the above navigation bar.
